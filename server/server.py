@@ -3,8 +3,23 @@ from config import API_KEY, ASSISTANT_ID
 client = OpenAI(api_key=API_KEY)
 from flask import Flask, request, jsonify
 import time
+import re
 
 app = Flask(__name__)
+
+def extract_coordinates(text):
+    """
+    Extracts coordinates from the text, assuming they are formatted as (latitude, longitude).
+    """
+    # Regex to find coordinates in the format (latitude, longitude)
+    pattern = re.compile(r"\(([-+]?[0-9]*\.?[0-9]+),\s*([-+]?[0-9]*\.?[0-9]+)\)")
+    match = pattern.search(text)
+    if match:
+        # Clean the text by removing the coordinates
+        clean_text = pattern.sub("", text)
+        coordinates = match.groups()
+        return clean_text, coordinates
+    return text, None
 
 def create_empty_thread():
     """ Create an empty thread to initiate the conversation. """
@@ -53,10 +68,24 @@ def send_and_receive_message(id = empty_thread_id):
     # Process and display messages
     thread_data = client.beta.threads.messages.list(id).data
 
-    # Extract the assistant's last message from the response
-    last_message = thread_data[-1].content[0].text.value
+    # # Extract the assistant's last message from the response
+    # last_message = thread_data[0].content[0].text.value
+    # coords = extract_coordinates(last_message)
 
-    return ({"response": last_message})
+    # if coords:
+    #     return ({"response": last_message, "coordinates": coords})
+    
+    # return {"response": last_message}
+
+    last_message = thread_data[0]
+    text, coords = extract_coordinates(last_message.content[0].text.value)
+    role = last_message.role
+
+    if coords:
+        return ({"response": text, "coordinates": coords, "role": role})
+    
+    else:
+        return({"response": text, "role": role})
 
 if __name__ == '__main__':
     app.run(debug=True)

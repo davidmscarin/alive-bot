@@ -1,3 +1,5 @@
+import requests
+
 def extract_text_from_file(filename):
     texts = []
     current_text = []
@@ -17,8 +19,15 @@ def extract_text_from_file(filename):
     
     return texts
 
-from send_request import send_request
+texts = extract_text_from_file('questions.txt')
 
-for line in extract_text_from_file('questions.txt'):
-    send_request(line)
+def send_request(text_input, url = 'http://localhost:5000/message'):
+    data = {'message': text_input}
+    response = requests.post(url, json=data)
+    print(response.json())
+
+for line in texts:
+    print(f'User:\n{line}\nModel:\n')
+    send_request(text_input=line)
+    print('\n')
 

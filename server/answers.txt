@@ -1,0 +1,21 @@
+User:
+Boa tarde, procuro um trilho que penso ter visto publicado recentemente neste grupo.  O trilho tem uma ponte em forma de curva sobre um rio em cascata. Será que alguém me saberá dizer qual é? Já procurei de várias maneiras no Google e não encontro. Obrigada desde já.
+Model:
+
+{'coordinates': ['32.7720', '-17.1429'], 'response': 'Boa tarde! Parece que está à procura do trilho da "Levada das 25 Fontes" na Ilha da Madeira. Esta levada é conhecida pela sua beleza natural, com uma ponte em forma de curva sobre um rio em cascata, proporcionando uma experiência incrível aos caminhantes. \n\nA "Levada das 25 Fontes" é um trilho bastante popular na Ilha da Madeira, em Portugal, devido às suas impressionantes paisagens e à combinação de natureza exuberante com a engenharia humana na forma de levadas e pontes.\n\nLatitude e longitude da "Levada das 
+25 Fontes": ', 'role': 'assistant'}
+
+
+User:
+Boa noite! Que trilho me podem recomendar na região do Porto onde ainda se possa ver a serra coberta de urze e carqueja?
+Muito obrigada e boas caminhadas!!
+Model:
+
+{'coordinates': ['40.8678', '-8.3020'], 'response': 'Boa noite! Uma excelente opção de trilho na região do Porto, onde ainda se pode ver a serra coberta de urze e carqueja, é o "Trilho da Freita". \n\nO "Trilho da Freita" é um percurso circular que oferece vistas deslumbrantes da paisagem natural da Serra da Freita, onde é possível encontrar extensas áreas cobertas de urze e carqueja. Esta região é conhecida pela sua beleza natural e diversidade de flora.\n\nO trilho da Freita é uma ótima opção para os amantes da natureza e para quem aprecia caminhadas em ambientes naturais preservados.\n\nLatitude e longitude do Trilho da Freita: ', 'role': 'assistant'}
+
+
+User:
+Boa tarde ha alguma coisa n'a zona de cantanhede ? Muito obrigado e bons passeios
+Model:
+
+{'coordinates': ['40.3605', '-8.5951'], 'response': 'Boa tarde! Em Cantanhede e arredores, existem várias atrações e locais interessantes para visitar. Alguns exemplos incluem:\n\n1. **Parque Urbano do Rio Novo**: Um espaço verde ideal para caminhadas relaxantes, piqueniques e atividades ao ar livre.\n2. **Praça Marquês de Marialva**: Uma praça central em Cantanhede, onde se pode apreciar a arquitetura local e desfrutar de cafés e restaurantes.\n3. **Castelo de Cantanhede**: Uma antiga fortificação que remonta à Idade Média, oferecendo uma vista panorâmica da região.\n\nEstas são apenas algumas sugestões, mas Cantanhede e seus arredores têm muito mais a oferecer em termos de patrimônio histórico, cultura e natureza.\n\nLatitude e longitude do Centro de Cantanhede: ', 'role': 'assistant'}
